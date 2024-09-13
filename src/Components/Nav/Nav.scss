@@ -1,0 +1,108 @@
+.nav {
+    background-color: #161414;
+    padding: 14px 0;
+    position: relative;
+
+
+    &_box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &_logo {
+        color: white;
+        font-family: "Roboto", sans-serif;
+        z-index: 999;
+
+        img {
+            width: 250px;
+            object-fit: cover;
+
+            @include media (900px) {
+                width: 200px;
+            }
+            @include media (700px) {
+                width: 180px;
+            }
+            @include media (500px) {
+                width: 160px;
+            }
+        }
+
+    }
+
+    &_list {
+        display: flex;
+        gap: 48px;
+
+        @include media (700px) {
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.9);
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(-110%);
+            transition: .5s;
+            gap: 35px;
+
+            &.active {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &_link {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 23.44px;
+        text-align: left;
+        color: white;
+        padding: 22px 0px;
+        border-bottom: 4px solid #0000;
+
+        &:hover {
+            border-bottom: 4px solid #B81313;
+        }
+
+        @include media (700px) {
+            &:hover {
+                border-bottom: none;
+                color: #B81313;
+            }
+        }
+
+        // @include media (600px) {
+        //     font-size: 16px;
+        //     line-height: 18.75px;
+        // }
+    }
+
+    &_menu,
+    &_close {
+        font-size: 35px;
+        color: white;
+        display: none;
+
+        @include media (700px) {
+            display: block;
+        }
+
+        @include media (600px) {
+            font-size: 30px;
+
+        }
+    }
+
+    &_close {
+        position: absolute;
+        top: 30px;
+        right: 15px;
+    }
+}

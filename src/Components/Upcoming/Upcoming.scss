@@ -1,0 +1,181 @@
+.upcoming {
+    margin-top: 90px;
+    @include media (1200px) {
+        margin-top: 70px;
+    }
+
+    @include media (900px) {
+        margin-top: 50px;
+    }
+
+    @include media (700px) {
+        margin-top: 40px;
+    }
+
+    &_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 77px;
+        width: 100%;
+
+        @include media (1200px) {
+            gap: 50px;
+        }
+
+        @include media (700px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 35px;
+        }
+
+        @include media (500px) {
+            gap: 25px;
+        }
+    }
+
+    &_image {
+
+        @include media (1200px) {
+            width: 300px;
+        }
+
+        @include media (900px) {
+            width: 250px;
+        }
+
+        @include media (500px) {
+            width: 220px;
+        }
+    }
+
+    &_card {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 50px;
+        width: 100%;
+
+        @include media (1200px) {
+            gap: 40px;
+        }
+
+        @include media (1070px) {
+            gap: 30px;
+        }
+
+        @include media (700px) {
+            align-items: center;
+            gap: 20px;
+        }
+
+        &_title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 71px;
+            font-weight: 400;
+            line-height: 83.2px;
+
+            @include media (1300px) {
+                font-size: 60px;
+                line-height: 70px;
+            }
+
+            @include media (1200px) {
+                font-size: 50px;
+                line-height: 60px;
+            }
+
+            @include media (1070px) {
+                font-size: 45px;
+                line-height: 50px;
+            }
+
+            @include media (980px) {
+                font-size: 38px;
+                line-height: 45px;
+            }
+
+            @include media (700px) {
+                font-size: 32px;
+                line-height: 40px;
+                text-align: center;
+            }
+
+            @include media (550px) {
+                font-size: 26px;
+                line-height: 35px;
+            }
+        }
+
+        &_text {
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 38.4px;
+            max-width: 707px;
+            width: 100%;
+
+            @include media (1200px) {
+                font-size: 22px;
+                line-height: 35px;
+            }
+
+            @include media (980px) {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            @include media (700px) {
+                font-size: 18px;
+                line-height: 25px;
+                text-align: center;
+            }
+
+            @include media (550px) {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        &_btn {
+            padding: 18px 48px;
+            background: #B20D0D;
+            border: none;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 38.4px;
+            border-radius: 26px;
+
+            @include media (1200px) {
+                padding: 16px 45px;
+                border-radius: 20px;
+                font-size: 22px;
+                line-height: 35px;
+            }
+
+            @include media (1070px) {
+                padding: 14px 40px;
+                border-radius: 15px;
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            @include media (980px) {
+                padding: 12px 35px;
+                border-radius: 10px;
+                font-size: 18px;
+                line-height: 25px;
+            }
+
+            @include media (980px) {
+                padding: 10px 28px;
+                border-radius: 10px;
+                font-size: 18px;
+                line-height: 25px;
+            }
+        }
+    }
+}

@@ -1,0 +1,142 @@
+@import './common.scss', './mixins.scss';
+@import '../../Components/Nav/Nav.scss',
+'../../Components/Upcoming/Upcoming.scss',
+'../../Components/Projects/Projects.scss',
+'../../Components/Footer/Footer.scss',
+'../../Components/Search/Search.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #100F0F;
+    cursor: none;
+}
+
+#root {
+    overflow: hidden;
+}
+
+#cursor {
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    will-change: transform;
+    mix-blend-mode: difference;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .cursor__circle {
+        width: 64px;
+        height: 64px;
+        margin-top: -50%;
+        margin-left: -50%;
+        border-radius: 50%;
+        border: solid 1px white;
+        box-shadow: 1px 1px 15px 1px grey;
+        opacity: 0.5;
+        transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+            background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+            border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+            width 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+            height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    #cursor.arrow .cursor__circle {
+        width: 128px;
+        height: 128px;
+        background-color: #073099;
+        border-color: #073099;
+    }
+
+    #cursor.subtle .cursor__circle {
+        opacity: 0.16;
+    }
+
+    #cursor.overlay .cursor__circle {
+        width: 48px;
+        height: 48px;
+        background-color: rgba(227, 222, 193, 0.16);
+        border-color: transparent;
+    }
+}
+
+.custom-cursor {
+    transition: transform 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28); // Suzib yurish
+}
+
+.container {
+    width: 80%;
+    margin-left: 10%;
+
+    @include media (900px) {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+.blockposts {
+    &_title {
+        font-family: 'Roboto', sans-serif;
+        font-size: 71px;
+        font-weight: 400;
+        line-height: 83.2px;
+        text-align: left;
+        color: white;
+    }
+
+    &_text {
+        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 38.4px;
+        text-align: left;
+        color: white;
+    }
+
+    &_box {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
+.blockpost {
+    margin-top: 120px;
+
+    &_card1 {
+        max-width: 959px;
+        width: 100%;
+    }
+
+    &_title {
+        font-family: 'Roboto', sans-serif;
+        font-size: 71px;
+        font-weight: 400;
+        line-height: 83.2px;
+        color: white;
+        max-width: 919px;
+        width: 100%;
+    }
+
+    &_text {
+        font-family: 'Roboto', sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 35.2px;
+        color: #A0A0A0;
+
+        span {
+            color: #DB2E2E;
+            text-decoration: underline;
+            text-decoration-color: #DB2E2E;
+        }
+    }
+}
